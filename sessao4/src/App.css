@@ -1,0 +1,13 @@
+body{
+    color: blackblue;
+}
+
+.grey{
+color: grey;
+border: 2px solid;
+}
+
+.blue{
+    color: cadetblue;
+    border: 5px solid;
+}
