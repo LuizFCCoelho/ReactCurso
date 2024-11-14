@@ -64,8 +64,7 @@ function App() {
   };
 
   // verificar letras
-  const verifyLetter = () => {
-    setGameStage(letter);
+  const verifyLetter = (letter) => {
     console.log(letter);
   };
 

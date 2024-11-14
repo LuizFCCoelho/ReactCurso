@@ -45,7 +45,7 @@ const Game = ({
           <input
             type="text"
             name="letter"
-            maxLenght="1"
+            maxlenght="1"
             required
             onChange={(e) => setLetter(e.target.value)}
             value={letter}
