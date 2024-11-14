@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./game.css";
 
 const Game = ({
@@ -10,6 +11,13 @@ const Game = ({
   guesses,
   score,
 }) => {
+  const [letter, setLetter] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    verifyLetter(letter);
+  };
+
   return (
     <div className="game">
       <p className="points">
@@ -33,8 +41,15 @@ const Game = ({
       </div>
       <div className="letterContainer">
         <p>tente advinhar aletra da palavra:</p>
-        <form>
-          <input type="text" name="letter" maxLenght="1" required />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="letter"
+            maxLenght="1"
+            required
+            onChange={(e) => setLetter(e.target.value)}
+            value={letter}
+          />
           <button>Jogar</button>
         </form>
       </div>

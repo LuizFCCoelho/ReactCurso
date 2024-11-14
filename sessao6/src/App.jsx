@@ -65,7 +65,8 @@ function App() {
 
   // verificar letras
   const verifyLetter = () => {
-    setGameStage(stages[2].name);
+    setGameStage(letter);
+    console.log(letter);
   };
 
   // reiniciar
